@@ -792,12 +792,12 @@ end)
 drops:Button("Change To 100", function()
 drop:Change("100")
 end)
- drops:Toggle("Hitbox all Player", function(v) 
- _G.HeadSize = 2500
+ drops:Toggle("Auto",false, function(v)
+_G.HeadSize = 2500
 _G.Disabled = v
-local function clip()
+local function hit()
 if _G.Disabled then
-for i,v in pairs(game:GetService('Players'):GetPlayers()) do
+for i,v in next, game:GetService('Players'):GetPlayers() do
 if v.Name ~= game:GetService('Players').LocalPlayer.Name then
 pcall(function()
 v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
@@ -806,11 +806,10 @@ v.Character.HumanoidRootPart.CanCollide = false
 end)
 end
 end
-else
-drop:Change("1")
+else drop:Change("1")
 end
 end
-game:GetService('RunService').RenderStepped:connect(clip)
+game:GetService('RunService').RenderStepped:connect(hit)
 end)
    local sldrs = serv:Channel("Walk Speed")    
    sldrs:Button("Clear", function(v)    
