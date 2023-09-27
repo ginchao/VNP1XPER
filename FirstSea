@@ -440,7 +440,9 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
   local plrlist = {}  
   local plr = nil  
   for i, v in pairs(game:GetService("Players"):GetChildren()) do  
-  table.insert(plrlist,v.Name)  
+  if v.Name ~= game.Players.LocalPlayer.Name then
+ table.insert(plrlist,v.Name) 
+ end 
   end  
   local drop = drops:Dropdown("Choose Player", plrlist, function(m)  
   for i, b in pairs(game:GetService("Workspace"):GetChildren()) do  
@@ -701,8 +703,10 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
 local plr1 = nil
 local plr2 = nil
  for i, v in pairs(game:GetService("Players"):GetChildren()) do 
+if v.Name ~= game.Players.LocalPlayer.Name then
  table.insert(plrlist,v.Name) 
  end 
+end
 local drop1 = drops:Dropdown("Choose", plrlist, function(m) 
 plr = m
 end)
