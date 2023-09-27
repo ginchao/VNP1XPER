@@ -783,24 +783,14 @@ end)
  drops:Button("Hitbox Refresh", function() 
  sldr:Change(1) 
  end) 
-drops:Button("Change To 2500", function() game.Players[plr].Character.HumanoidRootPart.CanCollide = false
-game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
-game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
+drops:Button("Change To 2500", function()
 drop:Change("2500")
 end)
  drops:Button("Change To 500", function()
-if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
-game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
-game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
 drop:Change("500")
-end
 end)
 drops:Button("Change To 100", function()
-if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
-game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
-game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
 drop:Change("100")
-end
 end)
  drops:Toggle("Hitbox all Player", function(v) 
  _G.HeadSize = 2500
