@@ -698,36 +698,30 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  end) 
  local plrlist = {} 
  local plr = nil 
+local plr1 = nil
+local plr2 = nil
  for i, v in pairs(game:GetService("Players"):GetChildren()) do 
  table.insert(plrlist,v.Name) 
  end 
- local drop = drops:Dropdown("Choose Player", plrlist, function(y) 
- for i, v in pairs(game.Players:GetPlayers()) do 
- if v.Name == y then 
- plr = y 
- end 
- end 
- end) 
-local drop = drops:Dropdown("Choose Player", plrlist, function(y) 
- for i, v in pairs(game.Players:GetPlayers()) do 
- if v.Name == y then 
- plr = y 
- end 
- end 
- end) 
-local drop = drops:Dropdown("Choose Player", plrlist, function(y) 
- for i, v in pairs(game.Players:GetPlayers()) do 
- if v.Name == y then 
- plr = y 
- end 
- end 
- end) 
- drops:Button("Refresh Player", function()  
- drop:Clear() 
- for i, b in pairs(game.Players:GetPlayers()) do 
- drop:Add(b.Name) 
- end 
- end) 
+local drop1 = drops:Dropdown("Choose", plrlist, function(m) 
+plr = m
+end)
+local drop2 = drops:Dropdown("Choose", plrlist, function(m) 
+plr1 = m
+end)
+local drop3 = drops:Dropdown("Choose", plrlist, function(m) 
+plr2 = m
+end)
+drops:Button("Refresh", function()
+drop1:Clear()
+drop2:Clear()
+drop3:Clear()
+for i, v in pairs(game.Players:GetPlayers()) do
+drop1:Add(v.Name)
+drop2:Add(v.Name)
+drop3:Add(v.Name)
+end
+end)
  drops:Toggle("⭐Super Ultra DAMGE Attack",false, function(v)   
    getgenv().autop = v;  
    spawn(function()   
@@ -756,9 +750,8 @@ _G.HeadSize = t
 _G.Disabled = plr
 local function clip()
 if _G.Disabled then
-game.Players[plr].Character.HumanoidRootPart.CanCollide = false
 for i,v in pairs(game:GetService('Players'):GetPlayers()) do
-if v.Name ~= game:GetService('Players').LocalPlayer.Name and v.Name == plr then
+if v.Name ~= game:GetService('Players').LocalPlayer.Name and v.Name == plr or v.Name == plr1 or v.Name == plr2 then
 pcall(function()
 v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
 v.Character.HumanoidRootPart.Transparency = 0.7
@@ -790,41 +783,53 @@ end)
  drops:Button("Hitbox Refresh", function() 
  sldr:Change(1) 
  end) 
-drops:Button("Change To 2500", function()
-if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
-drop:Change("2500")
-end
+drops:Button("Change To 2500", function() game.Players[plr].Character.HumanoidRootPart.CanCollide = false
+game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
+game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
+drop1:Change("2500")
+drop2:Change("2500")
+drop3:Change("2500")
 end)
  drops:Button("Change To 500", function()
 if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
-drop:Change("500")
+game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
+game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
+drop3:Change("500")
+drop1:Change("500")
+drop2:Change("500")
 end
 end)
 drops:Button("Change To 100", function()
 if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
-drop:Change("100")
+game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
+game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
+drop1:Change("100")
+drop2:Change("100")
+drop3:Change("100")
 end
 end)
- drops:Button("Hitbox all Player", function() 
- local plr = game.Players.LocalPlayer 
- Players = game:GetService("Players") 
-         for i, v in pairs(Players:GetPlayers()) do 
- if v ~= plr and v.Character:FindFirstChild("HumanoidRootPart") then 
- local sizeArg = 2500 
-                         local Size = Vector3.new(sizeArg,sizeArg,sizeArg) 
-                         local Root = v.Character:FindFirstChild("HumanoidRootPart") 
-                         if Root:IsA("BasePart") then 
-                 if not sizeArg == 1 then 
-                                         Root.Size = Vector3.new(2,1,1) 
-                                         Root.Transparency = 0.4 
-                                 else 
-                                         Root.Size = Size 
-                                         Root.Transparency = 0.4 
-                                 end 
- end 
- end 
- end 
- end) 
+ drops:Toggle("Hitbox all Player", function(v) 
+ _G.HeadSize = 2500
+_G.Disabled = v
+local function clip()
+if _G.Disabled then
+for i,v in pairs(game:GetService('Players'):GetPlayers()) do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name and v.Name == plr or v.Name == plr1 or v.Name == plr2 then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+else
+drop1:Change("1")
+drop2:Change("1")
+drop3:Change("1")
+end
+game:GetService('RunService').RenderStepped:connect(clip)
+end)
    local sldrs = serv:Channel("Walk Speed")    
    sldrs:Button("Clear", function(v)    
     game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2    
