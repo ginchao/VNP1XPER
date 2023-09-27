@@ -748,7 +748,7 @@ end)
    end   
    end)   
    end)  
- local drop = drops:Slider("Slide me!", 0, 2500, 0, function(t)
+ local drop = drops:Slider("Slide", 0, 2500, 0, function(t)
 print(t)
 _G.HeadSize = t
 _G.Disabled = true
@@ -784,8 +784,8 @@ end)
  if not getgenv().Clip then Noclipping:Disconnect() end 
  end) 
 
- drops:Button("Hitbox Refresh", function() 
- drop:Change(1) 
+ drops:Button("Hitbox Refresh", function()
+ drop:Change("1")
  end) 
 drops:Button("Change To 2500", function()
 drop:Change("2500")
