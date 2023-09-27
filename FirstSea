@@ -708,6 +708,20 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  end 
  end 
  end) 
+local drop = drops:Dropdown("Choose Player", plrlist, function(y) 
+ for i, v in pairs(game.Players:GetPlayers()) do 
+ if v.Name == y then 
+ plr = y 
+ end 
+ end 
+ end) 
+local drop = drops:Dropdown("Choose Player", plrlist, function(y) 
+ for i, v in pairs(game.Players:GetPlayers()) do 
+ if v.Name == y then 
+ plr = y 
+ end 
+ end 
+ end) 
  drops:Button("Refresh Player", function()  
  drop:Clear() 
  for i, b in pairs(game.Players:GetPlayers()) do 
