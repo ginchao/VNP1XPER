@@ -786,26 +786,20 @@ end)
 drops:Button("Change To 2500", function() game.Players[plr].Character.HumanoidRootPart.CanCollide = false
 game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
 game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
-drop1:Change("2500")
-drop2:Change("2500")
-drop3:Change("2500")
+drop:Change("2500")
 end)
  drops:Button("Change To 500", function()
 if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
 game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
 game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
-drop3:Change("500")
-drop1:Change("500")
-drop2:Change("500")
+drop:Change("500")
 end
 end)
 drops:Button("Change To 100", function()
 if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
 game.Players[plr1].Character.HumanoidRootPart.CanCollide = false
 game.Players[plr2].Character.HumanoidRootPart.CanCollide = false
-drop1:Change("100")
-drop2:Change("100")
-drop3:Change("100")
+drop:Change("100")
 end
 end)
  drops:Toggle("Hitbox all Player", function(v) 
@@ -823,9 +817,7 @@ end)
 end
 end
 else
-drop1:Change("1")
-drop2:Change("1")
-drop3:Change("1")
+drop:Change("1")
 end
 end
 game:GetService('RunService').RenderStepped:connect(clip)
