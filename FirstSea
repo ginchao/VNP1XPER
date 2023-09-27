@@ -822,11 +822,11 @@ v.Character.HumanoidRootPart.CanCollide = false
 end)
 end
 end
-end
 else
 drop1:Change("1")
 drop2:Change("1")
 drop3:Change("1")
+end
 end
 game:GetService('RunService').RenderStepped:connect(clip)
 end)
