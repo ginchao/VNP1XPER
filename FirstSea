@@ -736,27 +736,26 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
    end   
    end)   
    end)  
- local sldr = drops:Slider("Player Hitbox", 0, 2500, 0, function(t) 
- if plr == nil then 
- DiscordLib:Notification("Warning", "Choose Player to Hitbox Player", "Ok") 
- elseif plr ~= nil then 
- local plr1 = game.Players.LocalPlayer 
- if game.Players ~= plr1 and game.Players[plr].Character:FindFirstChild("HumanoidRootPart") then 
- local sizeArg = t 
-                         local Size = Vector3.new(sizeArg,sizeArg,sizeArg) 
-                         local Root = game.Players[plr].Character:FindFirstChild("HumanoidRootPart") 
-                         if Root:IsA("BasePart") then 
-                 if not sizeArg == 1 then 
-                                         Root.Size = Vector3.new(2,1,1) 
-                                         Root.Transparency = 0.4 
-                                 else 
-                                         Root.Size = Size 
-                                         Root.Transparency = 0.4 
-                                 end 
- end 
- end 
- end 
- end) 
+ local drop = drops:Slider("Slide me!", 0, 2500, 0, function(t)
+print(t)
+_G.HeadSize = t
+_G.Disabled = plr
+local function clip()
+if _G.Disabled then
+game.Players[plr].Character.HumanoidRootPart.CanCollide = false
+for i,v in pairs(game:GetService('Players'):GetPlayers()) do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name and v.Name == plr then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+game:GetService('RunService').RenderStepped:connect(clip)
+end)
  local Noclipping = nil 
  drops:Toggle("Noclip",false, function(v) 
  getgenv().Clip = v 
@@ -773,19 +772,25 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  Noclipping = game.RunService.Stepped:Connect(NoclipLoop) 
  if not getgenv().Clip then Noclipping:Disconnect() end 
  end) 
-  
- drops:Button("Hitbox 1", function() 
+
+ drops:Button("Hitbox Refresh", function() 
  sldr:Change(1) 
  end) 
- drops:Button("Hitbox 80", function() 
- sldr:Change(80) 
- end) 
- drops:Button("Hitbox 500", function() 
- sldr:Change(500) 
- end) 
- drops:Button("Hitbox 2500 Max", function() 
- sldr:Change(2500) 
- end) 
+drops:Button("Change To 2500", function()
+if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
+drop:Change("2500")
+end
+end)
+ drops:Button("Change To 500", function()
+if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
+drop:Change("500")
+end
+end)
+drops:Button("Change To 100", function()
+if plr then game.Players[plr].Character.HumanoidRootPart.CanCollide = false
+drop:Change("100")
+end
+end)
  drops:Button("Hitbox all Player", function() 
  local plr = game.Players.LocalPlayer 
  Players = game:GetService("Players") 
