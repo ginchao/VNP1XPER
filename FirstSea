@@ -1423,9 +1423,7 @@ end)
  end 
  end 
  end) 
- for i, c in pairs(game.Players:GetChildren()) do  
-if find() then drops:Label("Level."..""..c.Data.Levels.Value.." ⭐["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value)
+ for i, c in pairs(game.Players:GetChildren()) do   drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value)
 else
 drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value)
  end
-end
