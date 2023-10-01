@@ -492,7 +492,7 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  elseif plr ~= nil then 
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[plr].Character.HumanoidRootPart.CFrame  
   wait(0.1)  
-  for i,v in pairs(game:GetDescendants()) do  
+  for i,v in pairs(game.Players:GetDescendants()) do  
   if v:IsA("RemoteEvent") and v.Name == "Fire" then  
   v:FireServer()  
   end  
@@ -616,7 +616,7 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
   end  
   end)  
   drops:Button("Super Ultra Skill", function()  
-  for i,v in pairs(game:GetDescendants()) do  
+  for i,v in pairs(game.Players:GetDescendants()) do  
   if v:IsA("RemoteEvent") and v.Name == "Fire" then  
   v:FireServer()  
   end  
