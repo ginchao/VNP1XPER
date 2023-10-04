@@ -1108,8 +1108,8 @@ end)
     btns:Button("Shift Lock", function()         loadstring(game:HttpGet("https://raw.githubusercontent.com/MiniNoobie/ShiftLockx/main/Shiftlock-MiniNoobie",true))()    
     end) 
  local chat = game.Players.LocalPlayer.Name 
- local serv = win:Server("Hello! ⭐"..chat, "") 
- local drops = serv:Channel("⭐Fast Attack Test") 
+ local serv = win:Server("Beta Test🌟", "") 
+ local drops = serv:Channel("🌟Fast Attack Test") 
  drops:Label("Fast Acttack Equiptool Fix New Acc") 
  drops:Toggle("Fast Acttack ",false, function(e) 
  getgenv().auto = e 
@@ -1266,7 +1266,7 @@ end)
  end 
  end 
  end) 
- drops:Label("⭐Fast Attack v2 No Choose, No fix New Acc") 
+ drops:Label("🌟Fast Attack v2 No Choose, No fix New Acc") 
  drops:Toggle("Fast Acttack ",false, function(e) 
  getgenv().fasst = e 
  if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
@@ -1436,7 +1436,7 @@ end
 end
 end)
  local chat = game.Players.LocalPlayer.Name 
- local drops = serv:Channel("⭐Players Test") 
+ local drops = serv:Channel("🌟Players Test") 
  local Weaponlist = {} 
  local Weapon = nil 
  for i, v in pairs(game:GetService("Players"):GetChildren()) do 
@@ -1459,3 +1459,52 @@ end)
  end) 
  for i, c in pairs(game.Players:GetChildren()) do   drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value)
  end
+local drops = serv:Channel("Players Testv2")
+ for i, c in pairs(game.Players:GetChildren()) do  
+if c.Name == "ginchao12" then drops:Label("Level."..""..c.Data.Levels.Value.." [🌟"..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value) 
+for i, a in pairs(c.Backpack:GetChildren()) do
+if a:FindFirstChild("Z") or a:FindFirstChild("K") then
+drops:Label("🔴 "..a.Name)
+end
+end
+for i, g in pairs(c.Character:GetChildren()) do
+if g:IsA("Tool") then
+drops:Label("🟢 "..g.Name)
+end
+end
+end
+end
+for i, c in pairs(game.Players:GetChildren()) do  
+if c.Name ~= "ginchao12" then
+drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value) 
+for i, a in pairs(c.Backpack:GetChildren()) do
+if a:FindFirstChild("Z") or a:FindFirstChild("K") then
+drops:Label("🔴 "..a.Name)
+end
+end
+for i, g in pairs(c.Character:GetChildren()) do
+if g:IsA("Tool") then
+drops:Label("🟢 "..g.Name)
+end
+end
+end
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
