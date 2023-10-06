@@ -251,7 +251,7 @@ getgenv().bringmob2 = mob
 if v2 then a:Disconnect() end
 if bringmob2 ~= v2 then
 v2 = game.RunService.RenderStepped:Connect(function()
-if bringmob == false then v2:Disconnect() end
+if bringmob2 == false then v2:Disconnect() end
  if quest == "Dark Boss"  then 
  game:GetService("Workspace")["NPC DAMAGE"].Raid.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
  elseif quest == "MMM Boss" then 
