@@ -162,7 +162,7 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  local v2 = nil
 getgenv().bringmob = mob
 if v2 then a:Disconnect() end
-if auto ~= a then
+if bringmob ~= a then
 v2 = game.RunService.RenderStepped:Connect(function()
 if bringmob == false then v2:Disconnect() end
  if quest == "Bandit" then  
@@ -200,7 +200,6 @@ if bringmob == false then v2:Disconnect() end
  elseif quest == "Flame User" then 
  game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6) 
  end 
- end
  end)
  end
  end 
@@ -257,7 +256,6 @@ if bringmob == false then v2:Disconnect() end
  game:GetService("Workspace")["NPC DAMAGE"].God.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
  elseif quest == "Red Hair" then 
  game:GetService("Workspace")["NPC DAMAGE"].RedH.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
- end 
  end
  end)
  end
