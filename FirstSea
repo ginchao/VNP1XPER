@@ -573,7 +573,7 @@ if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRoo
   end)  
   drops:Toggle("Auto Bring All Player, Need LoadMap",false, function(t)  
   local v2 = nil
-getgenv().brin = mob
+getgenv().brin = t
 if v2 then a:Disconnect() end
 if brin ~= v2 then
 v2 = game.RunService.RenderStepped:Connect(function()
