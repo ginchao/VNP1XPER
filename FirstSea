@@ -162,7 +162,7 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  local v2 = nil
 getgenv().bringmob = mob
 if v2 then a:Disconnect() end
-if bringmob ~= a then
+if bringmob ~= v2 then
 v2 = game.RunService.RenderStepped:Connect(function()
 if bringmob == false then v2:Disconnect() end
  if quest == "Bandit" then  
@@ -247,9 +247,9 @@ if quest == nil then
  DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok")  
  elseif quest ~= nil then  
   local v2 = nil
-getgenv().bringmob = mob
+getgenv().bringmob2 = mob
 if v2 then a:Disconnect() end
-if auto ~= a then
+if bringmob2 ~= v2 then
 v2 = game.RunService.RenderStepped:Connect(function()
 if bringmob == false then v2:Disconnect() end
  if quest == "Dark Boss"  then 
