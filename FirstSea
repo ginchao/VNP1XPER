@@ -159,10 +159,12 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  if quest == nil then  
  DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok")  
  elseif quest ~= nil then  
- getgenv().bring = mob  
- spawn(function()  
- while bring do wait()  
- pcall(function()  
+ local v2 = nil
+getgenv().bringmob = mob
+if v2 then a:Disconnect() end
+if auto ~= a then
+v2 = game.RunService.RenderStepped:Connect(function()
+if bringmob == false then v2:Disconnect() end
  if quest == "Bandit" then  
  for i, v in pairs(fiv:GetChildren()) do  
  if v.Name == "Bandit" then  
@@ -198,9 +200,9 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  elseif quest == "Flame User" then 
  game.Workspace["NPC DAMAGE"].Ace.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-6) 
  end 
- end)  
- end  
- end)  
+ end
+ end)
+ end
  end 
  end) 
   
@@ -231,17 +233,22 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["QUEST DARK"].ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer() 
  elseif quest == "Red Hair" then 
  game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["SECRET MAP"]["RED HAIR QUESTT HAHHA"].ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer() 
- end 
- end) 
- end 
- end) 
+ end
+ end)
+ end
+ end)
  end) 
  drops:Toggle("Choose Mob To Auto Bring",false, function(mob) 
  local plrmain = game.Players.LocalPlayer 
- getgenv().autobring = mob 
- spawn(function() 
- while autobring do wait() 
- pcall(function() 
+if quest == nil then  
+ DiscordLib:Notification("Warning", "Choose Mob To Bring", "Ok")  
+ elseif quest ~= nil then  
+  local v2 = nil
+getgenv().bringmob = mob
+if v2 then a:Disconnect() end
+if auto ~= a then
+v2 = game.RunService.RenderStepped:Connect(function()
+if bringmob == false then v2:Disconnect() end
  if quest == "Dark Boss"  then 
  game:GetService("Workspace")["NPC DAMAGE"].Raid.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
  elseif quest == "MMM Boss" then 
@@ -251,10 +258,11 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  elseif quest == "Red Hair" then 
  game:GetService("Workspace")["NPC DAMAGE"].RedH.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.5) 
  end 
- end) 
+ end
+ end)
+ end
  end 
- end) 
- end) 
+ end)
   local drops = serv:Channel("Weapon")  
   local Weaponlist = {}  
   local Weapon = nil  
