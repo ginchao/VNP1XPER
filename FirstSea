@@ -53,7 +53,7 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  end 
  end) 
  end)
-tgls:Label("Auto Skill")
+tgls:Seperator()
 tgls:Toggle("Auto Z",false, function(z)
 getgenv().autoskill = z
 while autoskill do wait()
