@@ -101,7 +101,7 @@ end
 end
 end)
 end
-end
+end)
 tgls:Toggle("Auto V",false, function(z)
 getgenv().autoskillv = z
 while autoskillv do wait()
