@@ -449,7 +449,7 @@ if bringmob2 == false then v2:Disconnect() end
  end
  end 
  end)
-  local drops = serv:Channel("Weapon And Fast Attck")  
+  local drops = serv:Channel("Weapon And Fast Attack")  
   local Weaponlist = {}  
   local Weapon = nil  
   for i, v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
