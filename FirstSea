@@ -1073,15 +1073,10 @@ end)
  drops:Button("Hitbox Refresh", function()
  drop:Change("1")
  end) 
-drops:Button("Change To 2500", function()
+drops:Button("Hitbox. Player. Choose", function()
 drop:Change("2500")
 end)
- drops:Button("Change To 500", function()
-drop:Change("500")
-end)
-drops:Button("Change To 100", function()
-drop:Change("100")
-end)
+
  drops:Toggle("Hitbox All Player",false, function(v)
 _G.HeadSize = 2500
 _G.Disabled = v
