@@ -1,18 +1,3 @@
--- // Anti afk V2 \\--
-task.spawn(function()
-    if game.PlaceId ~= 9821272782 then
-        getgenv().Press = function(v)
-            return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
-        end
-        while true do wait(10.5)
-            Press("RightBracket");
-        end
-    else
-        while true do wait(10.5)
-            keypress(0xDD);
-        end
-    end
-end)
 
 ------------
 function find(se)
@@ -1380,6 +1365,23 @@ end)
  DiscordLib:Notification("Wait a Sec","Teleport To Second Sea...","...") 
  tps:Teleport("7258239416") 
  end) 
+btns:Toggle("Anti Afk",false,function()
+-- // Anti afk V2 \\--
+task.spawn(function()
+    if game.PlaceId ~= 9821272782 then
+        getgenv().Press = function(v)
+            return game:GetService("VirtualInputManager"):SendKeyEvent(true, v, false, game);
+        end
+        while true do wait(10.5)
+            Press("RightBracket");
+        end
+    else
+        while true do wait(10.5)
+            keypress(0xDD);
+        end
+    end
+end)
+end)
  local inf = nil 
  btns:Toggle("Infjump", false, function(v) 
  if inf then inf:Disconnect() end 
