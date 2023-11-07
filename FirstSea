@@ -186,40 +186,101 @@ end)
  wait(0.4) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2568.78198, 51.7689095, -56.6604958, -0.453282833, 0, 0.891366661, 0, 0.99999994, -0, -0.89136678, 0, -0.453282773)*CFrame.new(0, 14, 0) 
  wait(0.4) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 27, 0) 
  end) 
- tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
- for _ = 1,3 do 
- getgenv().autoyoruv3 = v 
- if getgenv().autoyoruv3 == true then 
- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 17, 0) 
- wait() 
- spawn(function() 
- while autoyoruv3 do wait() 
+ 
+local tgls = serv:Channel("NPC")
+local bb = nil
+local tgl = tgls:Dropdown("Choose Bag", {"Beli 100k [ sell ]","Beli 1M [ sell ]","Beli 10M [ sell ]","Beli 100M [ sell ]",} , function(y)
+bb = y
+end)
+tgls:Toggle("Choose To Auto Buy Bag",false, function(a)
+if bb == nil then
+DiscordLib:Notification("Warning", "Choose To Buy", "Ok")
+else
+getgenv().BuyBag = a
+while BuyBag do task.wait()
+fireclickdetector(game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank[bb].ClickDetector)
+end
+end
+end)
+tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
+if  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]:FindFirstChild("Yoru V3 random") then
+getgenv().autoyoruv3 = v 
+ while autoyoruv3 do wait()
  pcall(function() 
- fireclickdetector(game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["Yoru V3 random"].ClickDetector) wait() 
+ fireclickdetector(game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["Yoru V3 random"].ClickDetector)
  end) 
  end 
- end) 
- end 
- end 
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
  end) 
  tgls:Toggle("Auto Buy Fruit",false, function(v) 
- getgenv().auto = v; 
+if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop:FindFirstChild(" ") then
+ getgenv().auto = v
  spawn(function() 
- while auto do wait() 
+ while auto do task.wait() 
  if not auto then break; end 
- fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM) wait() 
+ fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM)
  end 
- end) 
+ end)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
  end) 
  tgls:Toggle("Auto Buy Secret Fruit",false, function(v) 
- getgenv().auto1 = v; 
+if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]:FindFirstChild("Secret Random") then
+ getgenv().auto1 = v
  spawn(function() 
- while auto1 do wait() 
+ while auto1 do task.wait() 
  if not auto1 then break; end 
- fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM) wait() 
+ fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
  end 
  end) 
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
  end) 
+tgls:Button("Buy God Speed", function(v) 
+if game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"]:FindFirstChild(" ")
+then
+ fireclickdetector(game:GetService("Workspace")["MMM ISLANDDD [Lv900+]"][" "].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+tgls:Button("Buy Dragon Combat", function(v) 
+if game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["Snow map"]:FindFirstChild(" ")
+then
+ fireclickdetector(game:GetService("Workspace")["SNOW ISLAND [ lv 50 + ]"]["Snow map"][" "].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+tgls:Button("Buy BisentoV1", function(v) 
+if game:GetService("Workspace")["SAND ISLAND [Lv 100+]"]:FindFirstChild("Bisento sell")
+then
+ fireclickdetector(game:GetService("Workspace")["SAND ISLAND [Lv 100+]"]["Bisento sell"].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+tgls:Button("Buy YoruV1", function() 
+if game:GetService("Workspace")["SKY ISLAND [ lv 250 + ]"]:FindFirstChild("Yoru sell")
+then
+ fireclickdetector(game:GetService("Workspace")["SKY ISLAND [ lv 250 + ]"]["Yoru sell"].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+tgls:Button("Buy Hamon", function() 
+if game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"]:FindFirstChild(" ")
+then
+ fireclickdetector(game:GetService("Workspace")["END TOWN [Lv550+] "]["ALL BOSS"][" "].ClickDetector)
+else
+DiscordLib:Notification("Warning", "Please Load Map", "Ok")
+end
+ end) 
+
  local drops = serv:Channel("Mob") 
  local quest = nil 
  local drop = drops:Dropdown("Mob lv 0 > lv 1000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User"}, function(y) 
@@ -1418,32 +1479,7 @@ end)
  end 
  end 
  end) 
- drops:Toggle("Fast Acttack x100",false, function(e) 
- getgenv().auto5 = e 
- for _ = 1,100 do wait() 
- if not getgenv().auto5 then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
- while auto5 do wait() 
- for i, c in pairs(game.Players.LocalPlayer:FindFirstChild("Backpack"):GetChildren()) do 
- if c:IsA("Tool") and c:FindFirstChild("Hitbox") then 
- c.Parent = game.Players.LocalPlayer.Character 
- if game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool") then 
- spawn(function() 
- while auto5 do wait() 
- for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
- if v:IsA("Tool") and v:FindFirstChild("Hitbox") then 
- v.Hitbox:FireServer(90,90,90) 
- if auto5 == false then game.Players.LocalPlayer.Character.Humanoid:UnequipTools(v) 
- end 
- end 
- end 
- end 
- end) 
- end 
- end 
- end 
- end 
- end 
- end) 
+
  drops:Label("🌟Fast Attack v2 No Choose, No fix New Acc") 
  drops:Toggle("Fast Acttack ",false, function(e) 
  getgenv().fasst = e 
@@ -1573,39 +1609,14 @@ end)
  end) 
  end 
  end) 
- drops:Toggle("Fast Acttack x100",false, function(e) 
- for _ = 1,100 do 
- getgenv().faster = e 
- if not getgenv().faster then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
- spawn(function() 
- while faster do wait() 
- if not getgenv().faster then break end 
- pcall(function() 
- for i, c in pairs(game.Players.LocalPlayer:FindFirstChild("Backpack"):GetChildren()) do 
- if c:IsA("Tool") and c:FindFirstChild("Hitbox") then 
- c.Parent = game.Players.LocalPlayer.Character 
- else 
- for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do 
- if v:IsA("Tool") then 
- v.Hitbox:FireServer(90,90,90) 
- if faster == false then game.Players.LocalPlayer.Character.Humanoid:UnequipTools()  
- end 
- end 
- end 
- end 
- end 
- end) 
- end 
- end) 
- end 
- end)
+ 
 local drops = serv:Channel("🌟Skill Tester")
 drops:Button("Beautiful Skill",function()
 for i, v in pairs(game.workspace:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Real Triple Katana"  then
 for k, a in pairs(v.Z:GetChildren()) do
 if a:IsA("RemoteEvent") and a.Name == "Fire" then
-for _ = 1,350 do 
+for _ = 1,750 do 
 a:FireServer()
 end
 end
