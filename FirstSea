@@ -1449,7 +1449,7 @@ for i, v in pairs(game.workspace:GetDescendants()) do
 if v:IsA("Tool") and v.Name == "Real Triple Katana"  then
 for k, a in pairs(v.Z:GetChildren()) do
 if a:IsA("RemoteEvent") and a.Name == "Fire" then
-for _ = 1,750 do 
+for _ = 1,400 do 
 a:FireServer()
 end
 end
