@@ -19,7 +19,7 @@ DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".        
  end
   local serv = win:Server("VNP1 X ⭐Premium", "") 
  local tgls = serv:Channel("Stats, Auto Skill and Load Map") 
-tgls:Button("Anhgai",function()
+tgls:Button("Ảnh Gái",function()
 local gais = 14
 local gai = {"rbxassetid://6942501524","rbxassetid://7903531742","rbxassetid://7903522083","rbxassetid://6409799523","rbxassetid://8881175113","rbxassetid://7584008919","rbxassetid://6271530098","rbxassetid://7388383866","rbxassetid://7962732035","rbxassetid://6842416695","rbxassetid://6576447146",
 		"rbxassetid://10171317457","rbxassetid://10171317457","rbxassetid://8598068647","rbxassetid://8192162908","rbxassetid://8677814109","rbxassetid://4597457883"
@@ -201,11 +201,10 @@ fireclickdetector(game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank[bb]
 end
 end
 end)
-tgls:Toggle("Auto Drop Item",false,function()
-getgenv().drop = true
+tgls:Toggle("Auto Drop Item",false,function(v)
+getgenv().drop = v
 while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
-wait()
 end
 end)
 tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
@@ -663,8 +662,8 @@ drops:Label("Fast ActtackV2 No Choose")
  end 
  end) 
  
-  drops:Label("Fast Attack Equip") 
- drops:Toggle("Fast Acttack ",false, function(e) 
+  drops:Label("Fast AttackV3") 
+ drops:Toggle("Fast ActtackV3 ",false, function(e) 
  getgenv().fasst = e 
  if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
  spawn(function() 
@@ -688,7 +687,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end 
  end) 
  end) 
- drops:Toggle("⭐Fast Acttack x5",false, function(e) 
+ drops:Toggle("⭐Fast ActtackV3 x5",false, function(e) 
  for _ = 1,5 do 
  getgenv().fastp = e 
  if not getgenv().fastp then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
@@ -714,7 +713,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end) 
  end 
  end) 
- drops:Toggle("⭐Fast Acttack x15",false, function(e) 
+ drops:Toggle("⭐Fast ActtackV3 x15",false, function(e) 
  for _ = 1,15 do 
  getgenv().faste = e; 
  if not getgenv().faste then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
@@ -740,7 +739,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end) 
  end 
  end) 
- drops:Toggle("⭐Fast Acttack x30",false, function(e) 
+ drops:Toggle("⭐Fast ActtackV3 x30",false, function(e) 
  for _ = 1,30 do 
  getgenv().auto = e; 
  if not getgenv().auto then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
@@ -766,7 +765,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end) 
  end 
  end) 
- drops:Toggle("⭐Fast Acttack x60",false, function(e) 
+ drops:Toggle("⭐Fast ActtackV3 x60",false, function(e) 
  for _ = 1,60 do 
  getgenv().fast = e 
  if not getgenv().fast then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
