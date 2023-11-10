@@ -1191,7 +1191,7 @@ end)
  btns:Button("Dark Island lv 1350+", function() 
   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 17, 0) 
  end) 
- local btns = serv:Channel("Mics")  
+ local btns = serv:Channel("Misc")  
 btns:Textbox("Bug Report", "Type!", true, function(t)
 if t then
 DiscordLib:Notification("Thông Báo","Tin Nhắn Đã Được Gửi.","Ok")
@@ -1370,7 +1370,28 @@ end)
  local tps = game:GetService("TeleportService") 
  DiscordLib:Notification("Wait a Sec","Teleport To Second Sea...","...") 
  tps:Teleport("7258239416") 
- end) 
+ end)
+btns:Button("Change Server", function()
+local httprequest = request or http_request or (http and http.request) or (fluxus.request and fluxus) or syn.request
+PlaceId = game.PlaceId
+if httprequest then
+		local servers = {}
+		local req = httprequest({Url = string.format("https://games.roblox.com/v1/games/%d/servers/Public?sortOrder=Desc&limit=100", PlaceId)})
+		local body = game.HttpService:JSONDecode(req.Body)
+		if body and body.data then
+			for i, v in next, body.data do
+				if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers and v.id ~= JobId then
+					table.insert(servers, 1, v.id)
+				end
+			end
+		end
+		if #servers > 0 then
+			game.TeleportService:TeleportToPlaceInstance(PlaceId, servers[math.random(1, #servers)], game.Players.LocalPlayer)
+		else
+			DiscordLib:Notification("Warning",Không Tìm Được Server, Hãy Thử Lại.","Ok")
+end
+		end
+end)
 btns:Toggle("Anti Afk",false,function()
 -- // Anti afk V2 \\--
 task.spawn(function()
