@@ -1477,6 +1477,22 @@ end
 end
 end
 end)
+drops:Toggle("Toggle Beautiful Skill",false,function(v)
+getgenv().beu = v
+while beu do task.wait()
+for i = 1,5 do
+for i, v in pairs(game.workspace:GetDescendants()) do
+if v:IsA("Tool") and v.Name == "Real Triple Katana"  then
+for k, a in pairs(v.Z:GetChildren()) do
+if a:IsA("RemoteEvent") and a.Name == "Fire" then
+a:FireServer()
+end
+end
+end
+end
+end
+end
+end)
  local chat = game.Players.LocalPlayer.Name 
  local drops = serv:Channel("🌟Players Test") 
  local Weaponlist = {} 
