@@ -473,6 +473,20 @@ end)
  end 
  end 
  end)
+drops:Toggle("Grabtools",false, function(I) 
+ getgenv().autograb = I 
+ spawn(function() 
+ while autograb==true do wait() 
+ if not getgenv().autograb then break end 
+ local humanoid = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid") 
+ for _, child in ipairs(workspace:GetChildren()) do 
+ if game.Players.LocalPlayer.Character and child:IsA("BackpackItem") and child:FindFirstChild("Handle") then 
+ humanoid:EquipTool(child) 
+ end 
+ end 
+ end 
+ end) 
+ end) 
   local drops = serv:Channel("Weapon And Fast Attack")  
   local Weaponlist = {}  
   local Weapon = nil  
@@ -811,21 +825,7 @@ drops:Label("https://gateway.hydrogen.sh/22cb8e5184707490e08f4114b97b7320?method
  end 
  end) 
  
- drops:Toggle("Grabtools",false, function(I) 
- getgenv().autograb = I 
- spawn(function() 
- while autograb==true do wait() 
- if not getgenv().autograb then break end 
- local humanoid = game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Humanoid") 
- for _, child in ipairs(workspace:GetChildren()) do 
- if game.Players.LocalPlayer.Character and child:IsA("BackpackItem") and child:FindFirstChild("Handle") then 
- humanoid:EquipTool(child) 
- end 
- end 
- end 
- end) 
- end)  
-  end)  
+ 
   local drops = serv:Channel("Player")  
   local plrlist = {}  
   local plr = nil  
