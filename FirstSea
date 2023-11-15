@@ -592,7 +592,7 @@ if bringmob2 == false then v2:Disconnect() end
   end  
  end 
   end)  
-drops:Label("Fast ActtackV2 No Choose") 
+drops:Label("https://gateway.hydrogen.sh/22cb8e5184707490e08f4114b97b7320?method=new---------------------Fast ActtackV2 No ---------------------") 
  drops:Toggle("Fast ActtackV2 ",false, function(e) 
  getgenv().auto = e 
  spawn(function() 
@@ -662,7 +662,7 @@ drops:Label("Fast ActtackV2 No Choose")
  end 
  end) 
  
-  drops:Label("Fast AttackV3") 
+  drops:Label("---------------------Fast AttackV3---------------------") 
  drops:Toggle("Fast ActtackV3 ",false, function(e) 
  getgenv().fasst = e 
  if not getgenv().fasst then game.Players.LocalPlayer.Character.Humanoid:UnequipTools() end 
