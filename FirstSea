@@ -287,7 +287,7 @@ DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
 
-  local drops = serv:Channel("Farm And Esp,ItemGrab") 
+  local drops = serv:Channel("Farm And LocalPlayer") 
  local quest = nil 
  local drop = drops:Dropdown("Mob lv 0 > lv 3000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User","MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y) 
  local plrmainhr = game.Players.LocalPlayer 
