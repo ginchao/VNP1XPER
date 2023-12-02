@@ -446,6 +446,24 @@ drops:Toggle("Esp 👁️", false, function(Value)
         end)
     end)
 end) 
+drops:Toggle("⭐Auto Armor",false, function(o)  
+  getgenv().autobuffhp = o  
+  while autobuffhp do wait()  
+  for i, v in pairs(game.Players:GetDescendants()) do  
+  if v:IsA("RemoteEvent") and v.Name == "Fire" and v:FindFirstChild("Armor") then  
+  v:FireServer()  
+  if autobuffhp == false then break; end  
+  end  
+  end  
+  end  
+  end)  
+  drops:Button("Super Ultra Skill", function()  
+  for i,v in pairs(game.Players:GetDescendants()) do  
+  if v:IsA("RemoteEvent") and v.Name == "Fire" then  
+  v:FireServer()  
+  end  
+  end  
+  end)  
 drops:Toggle("Anti Afk",false,function()
 -- // Anti afk V2 \\--
 task.spawn(function()
@@ -1018,24 +1036,7 @@ if brin == false then v2:Disconnect() end
   end  
   end)  
   end)  
-  drops:Toggle("⭐Auto Armor",false, function(o)  
-  getgenv().autobuffhp = o  
-  while autobuffhp do wait()  
-  for i, v in pairs(game.Players:GetDescendants()) do  
-  if v:IsA("RemoteEvent") and v.Name == "Fire" and v:FindFirstChild("Armor") then  
-  v:FireServer()  
-  if autobuffhp == false then break; end  
-  end  
-  end  
-  end  
-  end)  
-  drops:Button("Super Ultra Skill", function()  
-  for i,v in pairs(game.Players:GetDescendants()) do  
-  if v:IsA("RemoteEvent") and v.Name == "Fire" then  
-  v:FireServer()  
-  end  
-  end  
-  end)  
+  
   drops:Button("⭐Super Ultra Inf Legendary Skill Attack", function()   
   for i, v in pairs(game:GetDescendants()) do  
   if v:IsA("RemoteEvent") and v.Name ~= "Eat" then  
