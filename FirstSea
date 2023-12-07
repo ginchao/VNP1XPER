@@ -9,7 +9,6 @@ end
 end
 return se
 end
-sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
   local win = DiscordLib:Window("[Test Hub X Premium⭐] ")  
 local per = game.Players.LocalPlayer.Name 
