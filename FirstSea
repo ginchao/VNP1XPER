@@ -9,6 +9,7 @@ end
 end
 return se
 end
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
   local win = DiscordLib:Window("[Test Hub X Premium⭐] ")  
 local per = game.Players.LocalPlayer.Name 
@@ -372,7 +373,8 @@ if bringmob == false then v2:Disconnect() end
  if quest == "Bandit" then  
  for i, v in pairs(fiv:GetChildren()) do  
  if v.Name == "Bandit" then  
- v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)  
+ v.HumanoidRootPart.CFrame = plrmain.Character.HumanoidRootPart.CFrame*CFrame.new(0,0,-5.4)
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)  
  end 
  end 
  elseif quest == "Snow Bandit" then  
@@ -968,7 +970,8 @@ getgenv().bri = a
 if v2 then a:Disconnect() end
 if bri ~= v2 then
 v2 = game.RunService.RenderStepped:Connect(function()
-if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait()  
+if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -5) wait()
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)  
   end)  
  end 
  end 
@@ -985,7 +988,7 @@ if bri == false then v2:Disconnect() end game.Players[plr].Character.HumanoidRoo
   local ok = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)  
   local tween = game.TweenService:Create(game.Players[plr].Character.HumanoidRootPart, TweenInfo.new(), {CFrame = ok * CFrame.new(0, 5, 0)})   
   tween:Play() wait()  
-  
+  sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
   end)  
   end  
   end)  
@@ -1001,7 +1004,8 @@ if brin == false then v2:Disconnect() end
  for i, v in pairs(game.Players:GetChildren()) do 
  local ok = game.Players.LocalPlayer.Name 
  if v.Name ~=  ok  then  
- v.Character.HumanoidRootPart.CFrame  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -7) wait() 
+ v.Character.HumanoidRootPart.CFrame  = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, -7) wait()
+sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge) 
  end 
  end 
  end) 
