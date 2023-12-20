@@ -392,6 +392,16 @@ elseif quest == "Dark Boss"  then
  end
  end 
  end) 
+drops:Button("🌟Attack X300 Click",function()
+for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+ if v:IsA("Tool") and v:FindFirstChild("Hitbox") then 
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+for i = 1,300 do
+ v.Hitbox:FireServer(math.huge,math.huge) 
+end
+end
+end
+end)
 drops:Button("Base Sky", function()   
 
     local box = Instance.new("Part") box.Parent = workspace box.Anchored = true box.CanCollide = true box.Name = "Testhub" box.Size = Vector3.new(100000,2,1000000) box.Position = Vector3.new(100,8000,100) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Testhub.CFrame*CFrame.new(0,15,0)
