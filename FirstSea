@@ -178,7 +178,7 @@ end)
  wait(0.4) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 27, 0) 
  end) 
  
-local tgls = serv:Channel(SHOP")
+local tgls = serv:Channel("SHOP")
 local bb = nil
 local tgl = tgls:Dropdown("Choose Bag", {"Beli 100k [ sell ]","Beli 1m [ sell ]","Beli 10M [ sell ]","Beli 100M [ sell ]",} , function(y)
 bb = y
