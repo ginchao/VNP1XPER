@@ -29,7 +29,7 @@ if find then
 DiscordLib:Notification("Premium Stars ⭐ Share","Hello! "..""..per..".                                              ".." Your Server Have Premium  [⭐"..find.."]","Thanks ".."⭐"..find)  
  end
   local serv = win:Server("VNP1 X ⭐Premium", "") 
- local tgls = serv:Channel("Stats, Auto Skill and Load Map") 
+ local tgls = serv:Channel("Stats, Auto Skill+Load Map") 
  tgls:Toggle("Auto Sword",false, function(z) 
  getgenv().autostats = z 
  spawn(function() 
@@ -178,7 +178,7 @@ end)
  wait(0.4) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3475.6543, 66.9159241, 3698.27271, 0.816925108, 0, -0.576743841, -0, 1.00000012, -0, 0.576743841, 0, 0.816925108)*CFrame.new(0, 27, 0) 
  end) 
  
-local tgls = serv:Channel("NPC")
+local tgls = serv:Channel(SHOP")
 local bb = nil
 local tgl = tgls:Dropdown("Choose Bag", {"Beli 100k [ sell ]","Beli 1m [ sell ]","Beli 10M [ sell ]","Beli 100M [ sell ]",} , function(y)
 bb = y
@@ -279,7 +279,7 @@ DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
 
-  local drops = serv:Channel("Farm And LocalPlayer") 
+  local drops = serv:Channel("Farm+LocalPlayer") 
  local quest = nil 
  local drop = drops:Dropdown("Mob lv 0 > lv 3000", {"Bandit","Boss Bandit","Snow Bandit","Boss Snow Bandit","Boss Sand","Sky Bandit","Boss Sky Bandit","White Man","Blue Fire","Big Man","Flame User","MMM Boss","Dark Boss","God Boss","Red Hair"}, function(y) 
  local plrmainhr = game.Players.LocalPlayer 
@@ -575,103 +575,7 @@ drops:Toggle("Grabtools",false, function(I)
                   end  
           end  
   end)  
- drops:Toggle("Choose Weapon To Fast ActackV1",false, function(v) 
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack", "Ok") 
- elseif Weapon ~= nil then 
-  getgenv().ie = v  
-  spawn(function()  
-  while ie == true do  
-  pcall(function()  
-  while ie do wait()  game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end  
-  end)  
-  end  
-  end) 
- end 
-  end)  
-  drops:Toggle("⭐Choose Weapon To x5 Fast ActackV1",false, function(v) 
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Atack x5", "Ok") 
- elseif Weapon ~= nil then 
-  for _ = 1,5 do  
-  getgenv().ea = v  
-  spawn(function()  
-  while ea == true do  
-  pcall(function()  
-  while ea do wait()  
-  pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end)  
-  end  
-  end)  
-  end  
-  end)  
-  end  
- end 
-  end)  
-  drops:Toggle("⭐Choose Weapon To x10 Fast ActackV1",false, function(v)  
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x10", "Ok") 
- elseif Weapon ~= nil then 
-  for _ = 1,10 do  
-  getgenv().euta = v  
-  spawn(function()  
-  while euta == true do  
-  pcall(function()  
-  while euta do wait()  
-  pcall(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end)  
-  end  
-  end)  
-  end  
-  end)  
-  end  
- end 
-  end)  
-  drops:Toggle("⭐Choose Weapon To X20 ActackV1",false, function(v)  
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x20", "Ok") 
- elseif Weapon ~= nil then 
-  for _ = 1,20 do  
-  getgenv().ej = v  
-  spawn(function()  
-  while ej == true do  
-  pcall(function()  
-  while ej do wait()  
-  spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end)  
-  end  
-  end)  
-  end  
-  end)  
-  end  
- end 
-  end)  
- drops:Toggle("⭐Choose Weapon To X50 ActackV1",false, function(v)  
- if Weapon == nil then 
- DiscordLib:Notification("Warning", "Choose Weapon to Fast Attack x50", "Ok") 
- elseif Weapon ~= nil then 
-  for _ = 1,50 do  
-  getgenv().ep = v  
-  spawn(function()  
-  while ep == true do  
-  pcall(function()  
-  while ep do wait()  
-  spawn(function()        game:GetService("Players").LocalPlayer.Character[Weapon].Hitbox:FireServer(1, 1)  
-  wait()  
-  end)  
-  end  
-  end)  
-  end  
-  end)  
-  end  
- end 
-  end)  
-drops:Label("---------------------Fast ActtackV2 No ---------------------") 
+ 
  drops:Toggle("Fast ActtackV2 ",false, function(e) 
  getgenv().auto = e 
  spawn(function() 
