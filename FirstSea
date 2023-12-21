@@ -167,7 +167,7 @@ end
 end)
 end
 end)
- tgls:Button("LoadMap Again", function() 
+ tgls:Button("LoadMap", function() 
  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(374.444855, 260.0784, -1132.96313, -0.986770988, -0, -0.162120432, -0, 1, -0, 0.162120432, 0, -0.986770988)*CFrame.new(0, 27, 0) 
  wait(0.6) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-972.539612, 171.965164, 375.375153, -0.352832913, -2.21926921e-08, 0.93568635, -3.1479086e-08, 1, 1.18478098e-08, -0.93568635, -2.5274252e-08, -0.352832913)*CFrame.new(0, 27, 0) 
  wait(0.6) game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1239.58276, 5268.82568, -139.64418, 0.97182107, -6.6261272e-08, 0.235719815, 5.32568372e-08, 1, 6.15355873e-08, -0.235719815, -4.72478874e-08, 0.97182107)*CFrame.new(0, 17, 0) 
@@ -1062,7 +1062,7 @@ sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius", math.huge)
   end  
   end  
   end) 
- local drops = serv:Channel("Player2") 
+ local drops = serv:Channel("Hitbox | Beta") 
  
  local plrlist = {} 
  local plr = nil 
@@ -1122,7 +1122,7 @@ end)
 drops:Button("Hitbox 500", function()
 drop:Change("500")
 end)
-drops:Button("Hitbox", function()
+drops:Button("Hitbox 2500", function()
 drop:Change("2500")
 end)
 
