@@ -21,13 +21,12 @@ game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic2.Size = Ve
 game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic.Size = Vector3.new(0.1,gais,gais) --gaisize shop
 
 ------------
-local find = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/Function-FindFirstChild-Plr/main/Find"))()
  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
   local win = DiscordLib:Window("[Test Hub X Premium⭐] ")  
 local per = game.Players.LocalPlayer.Name 
 if find then
-DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium","Ok")  
- end
+DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok")  
+ 
   local serv = win:Server("VNP1 X ⭐Premium", "") 
  local tgls = serv:Channel("Stats, Auto Skill+Load Map") 
  tgls:Toggle("Auto Sword",false, function(z) 
