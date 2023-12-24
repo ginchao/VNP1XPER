@@ -26,7 +26,7 @@ local find = loadstring(game:HttpGet("https://raw.githubusercontent.com/ginchao/
   local win = DiscordLib:Window("[Test Hub X Premium⭐] ")  
 local per = game.Players.LocalPlayer.Name 
 if find then
-DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium   [⭐"..find.."]","Ok")  
+DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium","Ok")  
  end
   local serv = win:Server("VNP1 X ⭐Premium", "") 
  local tgls = serv:Channel("Stats, Auto Skill+Load Map") 
