@@ -540,7 +540,7 @@ drops:Toggle("Grabtools",false, function(I)
  end 
  end) 
  end)
-local drops = serv:Channel("⭐Check And Fake Item")
+local drops = serv:Channel("⭐Check+Fake ")
 local check = nil
 local plrlist = {}
 for i, v in pairs(game.Players:GetPlayers()) do
@@ -621,7 +621,7 @@ drops:Button("Get All Item But Fake",Color3.fromRGB(255,1,1),function()
 		    clonefake.Parent = game.Players.LocalPlayer.Backpack
         end
 end)
-  local drops = serv:Channel("Weapon And Fast Attack")  
+  local drops = serv:Channel("Weapon+Fast Attack")  
   local Weaponlist = {}  
   local Weapon = nil  
   for i, v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do  
