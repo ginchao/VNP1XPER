@@ -1534,31 +1534,6 @@ end
 end
 end)
  local chat = game.Players.LocalPlayer.Name 
- local drops = serv:Channel("🌟Players Test") 
- local Weaponlist = {} 
- local Weapon = nil 
- for i, v in pairs(game:GetService("Players"):GetChildren()) do 
- table.insert(Weaponlist,"Level".."."..v.Data.Levels.Value.."          "..v.Name.."          ".."HP"..":"..v.Character.Humanoid.Health) 
- end 
- local drop = drops:Dropdown("Pick me!", Weaponlist, function(cu) 
- for i, v in pairs(game.Players:GetPlayers()) do 
- if cu == v.Name then 
- Weapon = cu 
- end 
- end 
- end) 
- drops: Button("Refresh Players", function() 
- drop:Clear() 
- for i,v in pairs(game.Players: GetChildren()) do 
- if v.Data:FindFirstChild("Levels") then 
- drop:Add("Level".."."..v.Data.Levels.Value.."          "..v.Name.."          ".."HP"..":"..v.Character.Humanoid.Health) 
- end 
- end 
- end) 
- for i, c in pairs(game.Players:GetChildren()) do
-if c.Name ~= "ginchao12" then   drops:Label("Level."..""..c.Data.Levels.Value.." ["..c.Name.."] HP:["..c.Character.Humanoid.Health.."] Beli:"..c.Data.Belis.Value)
- end
-end
 local drops = serv:Channel("🌟Players Testv2")
 for i, c in pairs(game.Players:GetChildren()) do  
 if c.Name ~= "ginchao12" then
