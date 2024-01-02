@@ -559,7 +559,7 @@ end)
 drops:Seperator()
 drops:Button("Check Devil Fruit",function()
 if check == nil then DiscordLib:Notification("Warning", "Choose Player", "Ok")
-elseif check == "ginchao2" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
+elseif check == "ginchao12" or check == "Evil_NinjaDevil" or check == "ZzKenKK1" or check == "Thanhnha161" then
 DiscordLib:Notification("Warning", "Can't Check ❌", "Ok")
 else
 for i, c in pairs(game.Players[check].storedata:GetChildren()) do
