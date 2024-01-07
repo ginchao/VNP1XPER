@@ -1567,11 +1567,11 @@ local count = 0
 drops:Button("Quay Event",function()
 count = count + 1
 local gifts = {
-  {name = "⭐ X20AllBUY", prob = 0.0000001}, -- 0,00001% chance
-  {name = "🟣 Item Tự Chọn", prob = 0.000001}, -- 0,0000001% chance
-  {name = "🔴 YoruV3", prob = 0.000009}, -- 0,0000009% chance
-  {name = "🔴 Elemental", prob = 0.000003}, -- 0,0000003% chance
-  {name = "🔵 1B Beli", prob = 0.00001}, 
+  {name = "⭐ X20AllBUY", prob = 0.00000001}, -- 0,00001% chance
+  {name = "🟣 Item Tự Chọn", prob = 0.0000001}, -- 0,0000001% chance
+  {name = "🔴 YoruV3", prob = 0.0000009}, -- 0,0000009% chance
+  {name = "🔴 Elemental", prob = 0.0000003}, -- 0,0000003% chance
+  {name = "🔵 1B Beli", prob = 0.000001}, 
   {name = "🟢 1 Beli", prob = 9} -- 90% chance
 }
 local total_prob = 0
@@ -1629,11 +1629,11 @@ getgenv().autoev = v
 while autoev do task.wait()
 count = count + 1
 local gifts = {
-  {name = "⭐ X20AllBUY", prob = 0.0000001}, -- 0,00001% chance
-  {name = "🟣 Item Tự Chọn", prob = 0.000001}, -- 0,0000001% chance
-  {name = "🔴 YoruV3", prob = 0.000009}, -- 0,0000009% chance
-  {name = "🔴 Elemental", prob = 0.000003}, -- 0,0000003% chance
-  {name = "🔵 1B Beli", prob = 0.00001}, 
+  {name = "⭐ X20AllBUY", prob = 0.00000001}, -- 0,00001% chance
+  {name = "🟣 Item Tự Chọn", prob = 0.0000001}, -- 0,0000001% chance
+  {name = "🔴 YoruV3", prob = 0.0000009}, -- 0,0000009% chance
+  {name = "🔴 Elemental", prob = 0.0000003}, -- 0,0000003% chance
+  {name = "🔵 1B Beli", prob = 0.000001}, 
   {name = "🟢 1 Beli", prob = 9} -- 90% chance
 }
 local total_prob = 0
