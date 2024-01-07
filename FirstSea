@@ -1624,7 +1624,7 @@ HttpService = game:GetService("HttpService")
  })
 end
 end)
-drops:Toggle("Quay Event [Limited Time!]",false,function(v)
+drops:Toggle("Auto Quay Event Nhanh [Limited Time!]",false,function(v)
 getgenv().autoev = v
 while autoev do task.wait()
 count = count + 1
@@ -1687,22 +1687,6 @@ HttpService = game:GetService("HttpService")
 end
 end
 end)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 drops:Seperator()
 drops:Label("Rớt Item Sẽ Hiện Bên Dưới ↓:")
 
