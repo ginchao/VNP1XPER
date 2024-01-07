@@ -1554,7 +1554,7 @@ end
 end
 end)
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
-local drops = serv:Channel("Event 🌟")
+local drops = serv:Channel("Event 🌟 Đã Tăng Tỉ Lệ Ra")
 drops:Button("CopyLinkFb Người Phát Quà",function()
 setclipboard("https://www.facebook.com/vanduysama?mibextid=LQQJ4d")
 end)
