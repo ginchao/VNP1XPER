@@ -1572,7 +1572,7 @@ local gifts = {
   {name = "🔴 YoruV3", prob = 0.000009}, -- 0,0000009% chance
   {name = "🔴 Elemental", prob = 0.000003}, -- 0,0000003% chance
   {name = "🔵 1B Beli", prob = 0.00001}, 
-  {name = "🟢 1 Beli", prob = 0.9} -- 90% chance
+  {name = "🟢 1 Beli", prob = 9} -- 90% chance
 }
 local total_prob = 0
 for i, gift in ipairs(gifts) do
@@ -1634,7 +1634,7 @@ local gifts = {
   {name = "🔴 YoruV3", prob = 0.000009}, -- 0,0000009% chance
   {name = "🔴 Elemental", prob = 0.000003}, -- 0,0000003% chance
   {name = "🔵 1B Beli", prob = 0.00001}, 
-  {name = "🟢 1 Beli", prob = 0.9} -- 90% chance
+  {name = "🟢 1 Beli", prob = 9} -- 90% chance
 }
 local total_prob = 0
 for i, gift in ipairs(gifts) do
