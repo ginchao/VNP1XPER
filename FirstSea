@@ -23,7 +23,7 @@ game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic.Size = Vec
 
 ------------
  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
-  local win = DiscordLib:Window("[Test Hub X Premium⭐] ")  
+  local win = DiscordLib:Window("[Test Hub X Premium⭐] "."Tất Cả Auto Buy X20 Được Nâng Cấp Bởi Rex_features ")  
 local per = game.Players.LocalPlayer.Name 
 DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok")  
  
@@ -198,49 +198,55 @@ while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
 end
 end)
-tgls:Toggle("⭐Auto Event Box x30",false, function(v)
+tgls:Toggle("Auto Event Box x20⭐",false, function(v)
 getgenv().boxe = v
 while boxe do task.wait()
 pcall(function()
-for _ = 1,30 do
+for _ = 1,20 do
 fireclickdetector(game:GetService("Workspace")["Event Island"].EventBox.ClickDetector)
 end
 end)
 end
 end)
-tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
+tgls:Toggle("Auto Buy Yoruv3 X20⭐",false, function(v) 
 if  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]:FindFirstChild("Yoru V3 random") then
 getgenv().autoyoruv3 = v 
  while autoyoruv3 do wait()
  pcall(function() 
+for _ = 1,20 do
  fireclickdetector(game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["Yoru V3 random"].ClickDetector)
+end
  end) 
  end 
 else
 DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
- tgls:Toggle("Auto Buy Fruit",false, function(v) 
+ tgls:Toggle("Auto Buy Fruit X20⭐",false, function(v) 
 if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop:FindFirstChild(" ") then
  getgenv().auto = v
  spawn(function() 
  while auto do task.wait() 
+for _ 1,20 do
  if not auto then break; end 
  fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM)
  end 
+end
  end)
 else
 DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
- tgls:Toggle("Auto Buy Secret Fruit",false, function(v) 
+ tgls:Toggle("Auto Buy Secret Fruit X20⭐",false, function(v) 
 if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]:FindFirstChild("Secret Random") then
  getgenv().auto1 = v
  spawn(function() 
  while auto1 do task.wait() 
+for _ 1,20 do
  if not auto1 then break; end 
  fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
  end 
+end
  end) 
 else
 DiscordLib:Notification("Warning", "Please Load Map", "Ok")
@@ -544,7 +550,7 @@ drops:Toggle("Grabtools",false, function(I)
 local drops = serv:Channel("⭐Check+Fake ")
 local check = nil
 local plrlist = {}
-local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Thanhnha161"}
+local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Rex_features"}
 function chan(se)
 for i, v3 in pairs(game.Players:GetPlayers()) do
 for i, v in pairs(chanck) do
@@ -1554,35 +1560,35 @@ end
 end
 end)
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
-local Yoruv3 = "0.0000009"
-local Elemental = "0.0000005"
-local tuchon = "0.0000003"
-local 1B = "0.000004"
-local 10B = "0.00000001"
+local Yoruv3 = 0.0000009
+local Elemental = 0.0000007
+local tuchon = 0.0000005
+local motB = 0.000006
+local muoiB = 0.0000001
 local count = 0
-local drops = serv:Channel("Event 🌟 0,000000")
+local drops = serv:Channel("Event 🌟 X2 Luck☘️")
 drops:Button("CopyLinkFb Người Phát Quà",function()
 setclipboard("https://www.facebook.com/vanduysama?mibextid=LQQJ4d")
 end)
 drops:Label("🟢 1 Beli = 90%".." | Khi Trúng Chụp Hình Lại Gửi Lên Chủ Hoặc Box") 
-drops:Label("🔵 1B = "..1B)
+drops:Label("🔵 1B = "..motB)
 drops:Label("🔴 Elemental = "..Elemental)
-drops:Label("⭐ UpHubX20BuyV2 Vĩnh Viễn = 0,00000001%") drops:Label("🔴 YoruV3 = "..Yoruv3) drops:Label("🟣 Item Tự Chọn = "..tuchon)
-drops:Label("⭐ 10B = "..10B")
+drops:Label("🔴 YoruV3 = "..Yoruv3) 
+drops:Label("🟣 Item Tự Chọn = "..tuchon)
+drops:Label("⭐ 10B = "..muoiB)
 local count = 0
-drops:Toggle("Auto Quay Event Nhanh X3💫",false,function(v)
+drops:Toggle("Auto Quay Event [Trung Bình]",false,function(v)
 getgenv().autoev = v
-while autoev do task.wait()
-for _ = 1,3 do
+while autoev do wait()
+for _ = 1,1 do
 count = count + 1
 local gifts = {
-  {name = "⭐ X20AllBUY", prob = 0.00000009}, -- 0,00001% chance
-  {name = "🟣 Item Tự Chọn", prob = tuchon}, -- 0,0000001% chance
+  {name = "🟣 Item Tự Chọn", prob = tuchon},
   {name = "🔴 YoruV3", prob = Yoruv3}, 
-  {name = "🔴 Elemental", prob = Elemental}, -- 0,0000003% chance
-  {name = "🔵 1B Beli", prob = 1B}, 
+  {name = "🔴 Elemental", prob = Elemental}, 
+  {name = "🔵 1B Beli", prob = motB}, 
   {name = "🟢 1 Beli", prob = 0.9},
-  {name = "⭐ 10B", prob = 10B}
+  {name = "⭐ 10B", prob = muoiB}
 }
 local total_prob = 0
 for i, gift in ipairs(gifts) do
@@ -1638,6 +1644,17 @@ end
 end)
 drops:Seperator()
 drops:Label("Rớt Item Sẽ Hiện Bên Dưới ↓:")
+
+
+
+
+
+
+
+
+
+
+
 
 
 
