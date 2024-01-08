@@ -192,7 +192,7 @@ fireclickdetector(game:GetService("Workspace")["PVP AND TRAINING AREA"].Bank[bb]
 end
 end
 end)
-tgls:Toggle("⭐Auto Drop Item",false,function(v)
+tgls:Toggle("Auto Drop Item⭐",false,function(v)
 getgenv().drop = v
 while drop do wait()
 game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("MobileDrop"):FireServer()
@@ -227,7 +227,7 @@ if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop:FindFirstChild(
  getgenv().auto = v
  spawn(function() 
  while auto do task.wait() 
-for _ 1,20 do
+for _ = 1,20 do
  if not auto then break; end 
  fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM)
  end 
@@ -242,7 +242,7 @@ if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]:FindFirstChild("Secr
  getgenv().auto1 = v
  spawn(function() 
  while auto1 do task.wait() 
-for _ 1,20 do
+for _ = 1,20 do
  if not auto1 then break; end 
  fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
  end 
