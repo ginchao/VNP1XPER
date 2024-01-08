@@ -23,7 +23,7 @@ game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic.Size = Vec
 
 ------------
  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
-  local win = DiscordLib:Window("[Test Hub X Premium⭐] "."Tất Cả Auto Buy X20 Được Nâng Cấp Bởi Rex_features ")  
+  local win = DiscordLib:Window("[Test Hub X Premium⭐] "."Tất Cả Auto Buy Được Nâng Cấp Bởi Rex_features ")  
 local per = game.Players.LocalPlayer.Name 
 DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok")  
  
