@@ -227,7 +227,7 @@ if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop:FindFirstChild(
  getgenv().auto = v
  spawn(function() 
  while auto do task.wait() 
-for _ = 1,20 do
+for _ = 1,1 do
  if not auto then break; end 
  fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM)
  end 
