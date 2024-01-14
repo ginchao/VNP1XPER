@@ -23,7 +23,7 @@ game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop.Map.Pic.Size = Vec
 
 ------------
  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
-  local win = DiscordLib:Window("[Test Hub X Premium⭐] ".."Tất Cả Auto Buy Được Nâng Cấp Bởi Rex_features ")  
+  local win = DiscordLib:Window("[Test Hub X Premium⭐] ".." ")  
 local per = game.Players.LocalPlayer.Name 
 DiscordLib:Notification("Premium Stars ⭐ Share","Hello! ".."⭐"..per..".                                              ".." Thanks For Buy Premium ","Ok")  
  
@@ -208,7 +208,7 @@ end
 end)
 end
 end)
-tgls:Toggle("Auto Buy Yoruv3 X20⭐",false, function(v) 
+tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
 if  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]:FindFirstChild("Yoru V3 random") then
 getgenv().autoyoruv3 = v 
  while autoyoruv3 do wait()
@@ -222,7 +222,7 @@ else
 DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
- tgls:Toggle("Auto Buy Fruit X20⭐",false, function(v) 
+ tgls:Toggle("Auto Buy Fruit",false, function(v) 
 if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop:FindFirstChild(" ") then
  getgenv().auto = v
  spawn(function() 
@@ -237,7 +237,7 @@ else
 DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
- tgls:Toggle("Auto Buy Secret Fruit X20⭐",false, function(v) 
+ tgls:Toggle("Auto Buy Secret Fruit",false, function(v) 
 if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]:FindFirstChild("Secret Random") then
  getgenv().auto1 = v
  spawn(function() 
