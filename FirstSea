@@ -550,7 +550,7 @@ drops:Toggle("Grabtools",false, function(I)
 local drops = serv:Channel("⭐Check+Fake ")
 local check = nil
 local plrlist = {}
-local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Rex_features"}
+local chanck = {"ginchao12","Evil_NinjaDevil","ZzKenKK1","Rx_features"}
 function chan(se)
 for i, v3 in pairs(game.Players:GetPlayers()) do
 for i, v in pairs(chanck) do
