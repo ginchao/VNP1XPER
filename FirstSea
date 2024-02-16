@@ -208,12 +208,12 @@ end
 end)
 end
 end)
-tgls:Toggle("Auto Buy Yoruv3",false, function(v) 
+tgls:Toggle("Auto Buy Yoruv3 X5⭐",false, function(v) 
 if  game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]:FindFirstChild("Yoru V3 random") then
 getgenv().autoyoruv3 = v 
  while autoyoruv3 do wait()
  pcall(function() 
-for _ = 1,20 do
+for _ = 1,5 do
  fireclickdetector(game:GetService("Workspace")["DAK ISLAND [Lv 1350+]"]["Yoru V3 random"].ClickDetector)
 end
  end) 
@@ -222,12 +222,12 @@ else
 DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
- tgls:Toggle("Auto Buy Fruit",false, function(v) 
+ tgls:Toggle("Auto Buy Fruit X5⭐",false, function(v) 
 if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop:FindFirstChild(" ") then
  getgenv().auto = v
  spawn(function() 
  while auto do task.wait() 
-for _ = 1,1 do
+for _ = 1,5 do
  if not auto then break; end 
  fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"].Shop[" "].RANDOM)
  end 
@@ -237,12 +237,12 @@ else
 DiscordLib:Notification("Warning", "Please Load Map", "Ok")
 end
  end) 
- tgls:Toggle("Auto Buy Secret Fruit",false, function(v) 
+ tgls:Toggle("Auto Buy Secret Fruit X5⭐",false, function(v) 
 if game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]:FindFirstChild("Secret Random") then
  getgenv().auto1 = v
  spawn(function() 
  while auto1 do task.wait() 
-for _ = 1,20 do
+for _ = 1,5 do
  if not auto1 then break; end 
  fireclickdetector(game:GetService("Workspace")["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
  end 
