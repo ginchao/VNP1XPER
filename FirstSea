@@ -1547,36 +1547,7 @@ end)
  local chat = game.Players.LocalPlayer.Name 
  local serv = win:Server("Beta Test🌟", "rbxasset://textures/ui/Chat/MessageCounter.png") 
  
-local drops = serv:Channel("🌟Skill Tester")
-drops:Button("Beautiful Skill",function()
-for i, v in pairs(game.workspace:GetDescendants()) do
-if v:IsA("Tool") and v.Name == "Real Triple Katana"  then
-for k, a in pairs(v.Z:GetChildren()) do
-if a:IsA("RemoteEvent") and a.Name == "Fire" then
-for _ = 1,400 do 
-a:FireServer()
-end
-end
-end
-end
-end
-end)
-drops:Toggle("Toggle Beautiful Skill",false,function(v)
-getgenv().beu = v
-while beu do task.wait()
-for i = 1,2 do
-for i, v in pairs(game.workspace:GetDescendants()) do
-if v:IsA("Tool") and v.Name == "Real Triple Katana"  then
-for k, a in pairs(v.Z:GetChildren()) do
-if a:IsA("RemoteEvent") and a.Name == "Fire" then
-a:FireServer()
-end
-end
-end
-end
-end
-end
-end)
+
 local serv = win:Server("Premium Buyer", "rbxassetid://15895254052")
 local ones = 0.000000001
 local Gon = 0.00000000001
