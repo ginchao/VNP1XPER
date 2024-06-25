@@ -21,7 +21,14 @@ game:GetService("ReplicatedStorage"):WaitForChild("Save"):WaitForChild("SavingMe
 return valuess
 end
 
-
+function equip()
+for i, v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
+if not v:IsA("Tool") and not v:FindFirstChildWhichIsA("RemoteEvent") or not v:FindFirstChild("Z") and not v:FindFirstChild("K") then 
+game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
+end
+end
+return v 
+end
 ------------
  local DiscordLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/ginchao/Discord-Lib/main/Discord-Lib'))()  
   local win = DiscordLib:Window("[Test Hub X Premium⭐] ".." ")  
@@ -495,9 +502,10 @@ local Noclipping = nil
  Noclipping = game:GetService("RunService").Stepped:Connect(NoclipLoop) 
  if not getgenv().Clip then Noclipping:Disconnect() end 
  end) 
-drops:Toggle("🌟 Auto Cất",false,function(l)
+drops:Toggle("🌟 Auto Storage",false,function(l)
 getgenv().au = l
-while au do wait()
+while au do wait(.1)
+equip()
 if game.Players.LocalPlayer.storedata.store.Value == "Store" then
 df(1) wait(1)
 elseif game.Players.LocalPlayer.storedata.store1.Value == "Store" then
@@ -518,7 +526,7 @@ elseif game.Players.LocalPlayer.storedata.store8.Value == "Store" then
 df(9) wait(1)
 elseif game.Players.LocalPlayer.storedata.store9.Value == "Store" then
 df(10) wait(1)
-else Notif.New("Full ❗",2)
+else Notif.New("Full DF❗",2)
 end
 if game.Players.LocalPlayer.storedata1.store.Value == "Store" then
 sw(-5) wait(1)
@@ -540,7 +548,7 @@ elseif game.Players.LocalPlayer.storedata1.store8.Value == "Store" then
 sw(3) wait(1)
 elseif game.Players.LocalPlayer.storedata1.store9.Value == "Store" then
 sw(4) wait(1)
-else Notif.New("Full ❗",2)
+else Notif.New("Full Sword❗",2)
 end
 if game.Players.LocalPlayer.storedata2.store.Value == "Store" then
 ml(-5) wait(1)
@@ -562,7 +570,7 @@ elseif game.Players.LocalPlayer.storedata2.store8.Value == "Store" then
 ml(3) wait(1)
 elseif game.Players.LocalPlayer.storedata2.store9.Value == "Store" then
 ml(4) wait(1)
-else Notif.New("Full ❗",2)
+else Notif.New("Full Melee❗",2)
 end
 end
 end)
